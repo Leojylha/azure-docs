@@ -1,0 +1,119 @@
+# RBAC
+
+- [Ohje](#ohje)
+- [1. Roolit](#1-roolit)
+- [2. Oikeuksien hallinta ja roolien määrääminen](#2-oikeuksien-hallinta-ja-roolien-määrääminen)
+- [3. Käyttö](#3-käyttö)
+- [4. Linkit](#4-linkit)
+
+---
+
+
+
+
+
+RBAC eli role-based access control on autorisointi järjestelmä, joka on rakennettu Azuren Resource Managerin(ARM) päälle. RBAC:in avulla voidaan määritellä, kuka pääsee pilvessä oleviin resursseihin käsiksi ja mitä he voivat niillä resursseilla tehdä. Tämä dokumentti käsittelee vain RBAC:in perustoimintoja.
+
+## Ohje
+---
+
+Dokumentin tarkoitus: Opastaa henkilökuntaa Azuren käytössä
+
+Dokumentin on laatinut: Leo Jylhä
+
+Päivitysvastuu: ICT-tiimi
+
+Tarvitset: Käyttäjä Azuressa
+
+
+
+## 1. Roolit
+---
+
+Oikeuksien jako tapahtuu roolien avulla. Roolit ovat kokoelmia erilaisista oikeuksista, joista yleisimpiä olevat "Contributor, Owner ja Reader". Azuressa on yli 120 sisäänrakennettua roolia, joiden oikeudet on kustomoitu roolikohtaisesti. Löytyy esim. Virtual Machine Contributor, Network Contributor ja Security Admin eli näitä löytyy joka lähtöön. Jos et löydä itsellesi sopivaa roolia, voi tämmöisen myös kustomoida itse, eli valita vain juuri ne oikeudet joita roolissasi tarvitset.
+
+Rooleja
+
+![roles](kuvat/roolit.png)
+
+Owner roolilla on korkeimmat oikeudet, Owner pääsee käsiksi kaikkiin resursseihin ja vain Owner voi jakaa rooleja käyttäjille. Jokaista subscriptionia kohtaan voi olla vain yksi Owner. Virittämössä käyttäjä "ict" on owner ja AD:ssa global administrator. Käyttäjän salasana löytyy Bitwardenista ja tunnistautumiseen käytetään authenticatoria mikä löytyy päivystäjän puhelimesta.
+
+## 2. Oikeuksien hallinta ja roolien määrääminen
+---
+
+Kun kutsut uuden käyttäjän Azure AD:n kautta, vakiona tälle käyttäjälle ei ole määrätty minkäänlaista roolia. Lisätään uudelle käyttäjälle "Reader" rooli, jolla hän saa näkymän kaikkiin olemassaoleviin resursseihin, muttei hän pysty esim. luomaan uusia resursseja, muokkaamaan resursseja tai poistamaan niitä. Tämä on mielestäni ainut ja oikea rooli uudelle käyttäjälle, jolla ei ole vielä kokemusta Azuren käytöstä. Tällä ennaltaehkäistään kohtalokkaiden vahinkojen sattumista.
+
+Oikeuksia voidaan jakaa neljällä eri tasolla:
+
+**Management Group**:
+
+Tämä on korkein taso, tänne oikeudet jaettaessa ne vaikuttavat management groupissa oleviin subscriptioneihin ja sitä kautta resurssiryhmiin ja resursseihin. Virittämössä oikeuksien määrääminen management group tasolle ei ole mahdollista.
+
+**Subscription** 
+
+Subscription tasolle oikeudet jaettaessa ne vaikuttavat kaikkiin subscriptionin sisällä oleviin resurssiryhmiin ja sitä kautta kaikkiin resursseihin.
+
+**Resource Group**
+
+Resource Group tasolle oikeudet jaettaessa ne vaikuttavat kaikkiin resurssiryhmän sisällä oleviin resursseihin. Esim. Jos resurssiryhmässä on 3 virtuaalikonetta ja oikeudet määrätään kyseiseen resurssiryhmään, pätevät oikeudet kaikkiin kolmeen virtuaalikoneeseen.
+
+**Resource**
+
+Tämä on alin taso, jolla oikeudet voidaan määrätä. Jos halutaan antaa oikeudet vain johonkin tiettyyn resurssiin tulee tätä tasoa käyttää. Esim. Ari haluaa päästä käsiksi SQL-tietokantaan, joka sijaitsee resurssiryhmässä 1. Ongelmana on, että resurssiryhmä 1 sisältää muita resursseja, jotka sisältävät arkaluontoista dataa. Tämän ratkaisemiseksi, annetaan Arille oikeudet resurssitasolla tähän tietokantaan, jolloin Ari ei näe muita ryhmässä olevia resursseja.
+
+
+Tässä eri tasot havainnoillistettuna
+
+![scope](kuvat/scope2.png)
+
+Rooleja voi määrätä useampia per käyttäjä, mutta ylempänä hierarkiassa oleva rooli ajaa alempana olevan roolin oikeuksien ylitse. Esim. määrätään käyttäjälle Owner rooli resource group tasolla, sitten määrätään käyttäjälle Reader rooli subscription tasolla. Lopputuloksena käyttäjällä on vain Reader roolin oikeudet, koska Reader on määrätty korkeammalla tasolla.
+
+
+## 3. Käyttö
+---
+
+Tässä esimerkki miten käyttäjälle annetaan Reader rooli.
+
+RBAC löytyy portaalissa aina samasta paikkaa jokasella eri tasolla.
+
+Tässä ohjeessa käytämme subscription tasoa.
+
+Kirjoita hakukenttään subscriptions ja valitse ensimmäinen. Valitse haluamasi subscription.
+
+![sub](kuvat/subs.png)
+
+Valitse vasemmalta Access Control (IAM)
+
+![access](kuvat/l%C3%B6ytyy.png)
+
+Täältä voit tarkastaa oman käyttäjäsi roolin painamalla "view my access"
+
+Annetut roolit tässä subscriptionissa painamalla "Role assignments"
+
+Tarkastella eri roolien oikeuksia painamalla "Roles".
+
+Uuden roolin antamiseksi painetaan Add ja Add role assignment.
+
+
+![roles](kuvat/nakyma.png)
+
+Valitse reader ja paina next.
+
+![reader](kuvat/reader.png)
+
+Valitse Assign access to: User
+
+Member: Valitse käyttäjä jolle haluat roolin antaa.
+
+Paina Next ja Review + Assign.
+
+![review](kuvat/valitse.png)
+
+Käyttäjälle on nyt annettu reader rooli, eli käyttäjän oikeudet rajoittuu vain resurssien lukemiseen. Jos käyttäjä koittaa esim. luoda resurssin, antaa Azure seuraavanlaisen ilmoituksen.
+
+![kuva](kuvat/access.png)
+
+
+## 4. Linkit
+
+[RBAC docs](https://learn.microsoft.com/en-us/azure/role-based-access-control/)
