@@ -1,0 +1,105 @@
+# Alkeet
+
+- [Ohje](#ohje)
+- [1. Johdanto](#1-johdanto)
+- [2. Aloitus](#2-aloitus)
+- [3. Käyttäjä](#3-käyttäjä)
+- [4. Perehtyminen](#4-perehtyminen)
+- [5. Sertifioinnit](#5-serifioinnit)
+- [6. Linkit ja materiaali](#6-linkit-ja-materiaali)
+
+# Ohje
+
+Dokumentin tarkolitus: Opastaa henkilökuntaa Azuren käytössä
+
+Dokumentin on laatinut: Leo Jylhä
+
+Päivitysvastuu: ICT-tiimi
+
+# 1. Johdanto
+
+Tarkoituksena helpoittaa pilviteknologioihin liittyvien asioiden opettelemista ja kartoittaa missä järjestyksessä asioita kannattaa alkaa opetella. Tässä dokumentissa käsitellään vain Microsoft Azurea. Kaikki linkit materiaaleihin löytyvät dokumentin lopusta.
+
+# 2. Aloitus
+
+Jos pilviteknologiat eivät ole tuttuja entuudestaan, suosittelen ensimmäisenä tutustumaan Azuren Fundamentals kurssiin. Tämän löydät Microsoft Learnista, jos polkuopinnot kiiinnostaa, tämä kurssi löytyy myös Metropolian puolelta. Kurssista saat perustiedot pilvimalleista, käyttötarkoituksista, hyödyistä ja alustan hallinnoinnista. Vahva suositus tälle kurssille, vaikka perusteet olisivat tuttuja, on hyvä näitä asioita kerrata.
+
+# 3. Käyttäjä
+
+Kun aloitat Azureen tutustumisen, suosittelen aluksi luomaan oman subscriptionin, Microsoft tarjoaa tähän 200 $ edestä käyttörahaa kuukauden ajaksi. Tämän avulla pääset tutustumaan Azure ympäristöön, luomaan resursseja ja testailemaan niitä, eikä kuluista tarvitse huolehtia. Vasta tämän jälkeen pyydä lisäämistä Virittämön omaan Azureen. 
+
+# 4. Perehtyminen
+
+Kun edellämainitut asiat on suoritettu, herää varmasti kysymys: Mitä seuraavaksi?
+
+Itse perehtyisin asioihin seuraavassa järjestyksessä.
+
+1. App Service, alusta web ja mobiilisovellusten kehitykselle. Tämä on Virittämöllä kovassa käytössä erilaisissa projekteissa.
+
+2. Virtual Machines ja Virtual Networks, näiden avulla pääset tutustumaan palvelinympäristöihin, infrastruktuurin hallintaan ja miten järjestelmät keskustelevat pilvessä keskenään.
+
+3. Azure Active Directory ja Role-Based Access Control, käyttäjien ja oikeuksien hallinta. Todella tärkeä alue hallita.
+
+
+Näiden jälkeen polku on auki, eli kiinnostuksen mukaan eteenpäin.
+
+Data-asioista kiinnostuneille avainsanoja: Data Factory, Databricks, Synapse Analytics, Cosmos DB, SQL Server jne.
+
+Administrointi: Key Vault, Microsoft Entra, Defender for Cloud, Monitor, Advisor jne.
+
+Tekoäly: Machine learning, Cognitive Services, Az Open AI jne.
+
+Devops: Az Devops, Tables, Pipelines, Boards, Test Plans jne.
+
+Ohjelmointi: Functions, Logic Apps, ARM templates, AZ CLI jne.
+
+# 5. Sertifioinnit
+
+Jos tulevaisuudessa työt Azuren parissa kiinnostaa, suosittelen sertifioitumaan, tämä edistää työllistymistäsi ja antaa työnantajalle todisteen osaamisestasi.
+
+ Aloittelijan sertifikaatit:
+
+AZ-900 Azure Fundamentals
+
+DP-900 Azure Data Fundamentals
+
+AI-900 Azure AI Fundamentals
+
+Edistyneemmän sertifikaatit:
+
+AZ-104 Azure Administrator Associate
+
+AZ-204 Azure Developer Associate
+
+DP-203 Azure Data Engineer Associate
+
+
+Microsoftilta löytyy myös Expert tason sertifikaatteja, mutta niitä ei käsitellä tässä dokumentissa.
+
+Sertifikaattien suorittaminen maksaa noin 50-150 euroa, jos et pääse kokeesta läpi, joudut maksamaan summan uudelleen, joten osallistu kokeeseen vasta kun olet varma osaamisestasi. Kokeen läpäisemiseksi tarvitaan minimissään 700/1000 pistettä.
+
+# 6. Linkit ja materiaali
+
+Tähän on kasattu dokumentin kannalta olennaisia linkkejä ja opetusmateriaalia.
+
+Ilmaisen käyttäjän pääset luomaan [täältä](https://azure.microsoft.com/en-us/free/)
+
+[Azure Fundamentals kurssi](https://learn.microsoft.com/en-us/certifications/exams/az-900/)
+
+[Azure App Service](https://learn.microsoft.com/en-us/azure/app-service/)
+
+[Azure Active Directory](https://learn.microsoft.com/en-us/azure/active-directory/)
+
+[Azure Virtual Machines](https://learn.microsoft.com/en-us/azure/virtual-machines/)
+
+[Learn to cloud](https://learntocloud.guide/) Tämä on aivan timanttinen sivu jos pilvihommat kiinnostaa. Implementoinut paljon asioita täältä omaan tekemiseen.
+
+Youtube kanavat joita kannattaa seurata:
+
+[Adam Marczak](https://www.youtube.com/@Azure4Everyone)
+
+Adam tuottaa parhaat tutoriaalit Azuresta, asiat selitetään idioottivarmoilla esimerkeillä. Iso suositus.
+
+[MadeByGPS](https://www.youtube.com/@MadeByGPS)
+
+Hyvää settiä pilvestä, IT-alasta, sertifikaateista ja työllistymisestä.
