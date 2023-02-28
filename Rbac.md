@@ -6,7 +6,7 @@
 - [3. Käyttö](#3-käyttö)
 - [4. Linkit](#4-linkit)
 
----
+
 
 
 
@@ -15,7 +15,7 @@
 RBAC eli role-based access control on autorisointi järjestelmä, joka on rakennettu Azuren Resource Managerin(ARM) päälle. RBAC:in avulla voidaan määritellä, kuka pääsee pilvessä oleviin resursseihin käsiksi ja mitä he voivat niillä resursseilla tehdä. Tämä dokumentti käsittelee vain RBAC:in perustoimintoja.
 
 ## Ohje
----
+
 
 Dokumentin tarkoitus: Opastaa henkilökuntaa Azuren käytössä
 
@@ -28,7 +28,7 @@ Tarvitset: Käyttäjä Azuressa
 
 
 ## 1. Roolit
----
+
 
 Oikeuksien jako tapahtuu roolien avulla. Roolit ovat kokoelmia erilaisista oikeuksista, joista yleisimpiä olevat "Contributor, Owner ja Reader". Azuressa on yli 120 sisäänrakennettua roolia, joiden oikeudet on kustomoitu roolikohtaisesti. Löytyy esim. Virtual Machine Contributor, Network Contributor ja Security Admin eli näitä löytyy joka lähtöön. Jos et löydä itsellesi sopivaa roolia, voi tämmöisen myös kustomoida itse, eli valita vain juuri ne oikeudet joita roolissasi tarvitset.
 
@@ -39,7 +39,7 @@ Rooleja
 Owner roolilla on korkeimmat oikeudet, Owner pääsee käsiksi kaikkiin resursseihin ja vain Owner voi jakaa rooleja käyttäjille. Jokaista subscriptionia kohtaan voi olla vain yksi Owner. Virittämössä käyttäjä "ict" on owner ja AD:ssa global administrator. Käyttäjän salasana löytyy Bitwardenista ja tunnistautumiseen käytetään authenticatoria mikä löytyy päivystäjän puhelimesta.
 
 ## 2. Oikeuksien hallinta ja roolien määrääminen
----
+
 
 Kun kutsut uuden käyttäjän Azure AD:n kautta, vakiona tälle käyttäjälle ei ole määrätty minkäänlaista roolia. Lisätään uudelle käyttäjälle "Reader" rooli, jolla hän saa näkymän kaikkiin olemassaoleviin resursseihin, muttei hän pysty esim. luomaan uusia resursseja, muokkaamaan resursseja tai poistamaan niitä. Tämä on mielestäni ainut ja oikea rooli uudelle käyttäjälle, jolla ei ole vielä kokemusta Azuren käytöstä. Tällä ennaltaehkäistään kohtalokkaiden vahinkojen sattumista.
 
@@ -70,7 +70,7 @@ Rooleja voi määrätä useampia per käyttäjä, mutta ylempänä hierarkiassa 
 
 
 ## 3. Käyttö
----
+
 
 Tässä esimerkki miten käyttäjälle annetaan Reader rooli.
 
