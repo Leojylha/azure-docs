@@ -15,7 +15,7 @@
 
 
 ## Ohje
-___
+
 Dokumentin tarkoitus: Opastaa henkilökuntaa Azuren käytössä
 
 Dokumentin on laatinut: Leo Jylhä
@@ -25,14 +25,14 @@ Päivitysvastuu: ICT-tiimi
 Tarvitset: Käyttäjä Azuressa, Visual Studio Code, Azure Tools lisäosa, perustietämys Dockerista
 
 ## 1. Johdanto
-___
+
 
 Tarkoituksena toimittaa Dockerisoitu sovellus Azuren App Serviceen.
 
 Tässä esimerkissä on käytetty simppeliä Node.Js sovellusta.
 
 ## 2. Image
----
+
 
 Buildataan sovelluksesta image ja varmistetaan, että containeri pyörii ja sovellus toimii lokaalisti.
 
@@ -50,7 +50,7 @@ Kun image on buildattu ja container testattu, voidaan se työntää Azuren Conta
 
 
 ## 3. Portal
----
+
 
 Kirjaudu Azure portaliin käyttäjätunnuksellasi ja salasanallasi [tästä.](https://portal.azure.com)
 
@@ -63,7 +63,7 @@ Valitse virittamo ja Repositories. Imagen nimi pitäisi nyt näkyä repositoryss
 ![repo](kuvat/repo.png)
 
 ## 4. Resurssit
----
+
 
 Nyt kun image on Azuressa, voidaan luodaa sovellukselle tarvittavat resurssit.
 
@@ -75,7 +75,7 @@ Resurssit luodaan seuraavassa järjestyksessä:
    
 
 ## 4.1 Resource Group
----
+
 Resurssiryhmä on säilytyspaikka resursseillesi, joita tulet sovellusta varten luomaan.
 
 Kirjoita hakukenttään "Resource group" ja valitse ensimmäinen, paina Create.
@@ -97,7 +97,7 @@ Anna resurssi ryhmällesi 4 tagia.
 Valitse Review + create.
 
 ## 4.2 App Service Plan
----
+
 
 Kirjoita hakukenttään "App service plan" ja valitse ensimmäinen. Paina Create.
 
@@ -117,7 +117,7 @@ Aseta seuraavat tiedot:
 ![plan2](kuvat/plan2.png)
 
 ## 4.3 Web App
----
+
 
 Kirjoita hakukenttään "App services" ja valitse ensimmäinen. Valitse Create.
 
@@ -152,7 +152,7 @@ Valitse Review + Create
 
 
 ## 5. Logs
----
+
 
 Valitse Deployment Center ja view logs.
 
@@ -169,7 +169,7 @@ Kun sovellus toimii, se antaa ylläolevan ilmoituksen.
 Sovelluksesi osoitteen löydät menemällä Overview -> URL
 
 ## 6. Linkit
----
+
 
 Tässä dokumentissa sovelluksen toimittaminen ja pystyttäminen on tehty mahdollisimman
 simppelillä tavalla.
