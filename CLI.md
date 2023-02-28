@@ -9,7 +9,7 @@ Suosittelen clihin tutustumista vasta kun perusteet Azuren käytöstä on hallus
 
 
 ## Cloud Shell
----
+
 
 Cloud shellin löydät portalista oikeasta yläkulmasta.
 
@@ -55,7 +55,7 @@ Näin helppoa on virtuaalikoneen luonti clin avulla, portalia käyttämällä t�
 ![delete](kuvat/cli7.png)
 
 ## Linkit
---- 
+
 
 [Informatiivinen video aiheesta.](https://www.youtube.com/watch?v=AzQTkl06D-Y)
 
