@@ -19,3 +19,5 @@
 [9. Sovelluksen siirtäminen Azureen](https://github.com/Leojylha/azure-docs/blob/main/9.%20%20App%20Service.md)
 
 [10. Sovelluksen toimituksen automatisointi](https://github.com/Leojylha/azure-docs/blob/main/10.%20Actions.md)
+
+[11. Opetusvideot](https://github.com/Leojylha/azure-docs/blob/main/video.md)
