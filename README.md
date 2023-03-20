@@ -21,3 +21,5 @@
 [10. Sovelluksen toimituksen automatisointi](https://github.com/Leojylha/azure-docs/blob/main/10.%20Actions.md)
 
 [11. Opetusvideot](https://github.com/Leojylha/azure-docs/blob/main/video.md)
+
+[12. Virittämön Azuren sisältö](https://github.com/Leojylha/azure-docs/blob/main/virittamo-azure.md)
