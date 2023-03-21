@@ -65,3 +65,8 @@ Softan projekti, virittämön omat kotisivut, sisältää myös virittämön con
 ***VisualStudiOnline***
 
 Sisältää tietoja azure devopsista.
+
+***Container registries**
+
+- virittamo: sisältää lukuisia imageja, joita käytetään sovellusten julkaisemiseen app servicessä.
+- digirastiregistry: sisältää digirastin imagen.
