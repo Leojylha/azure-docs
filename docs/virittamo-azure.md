@@ -28,7 +28,7 @@ Academyn oma projekti.
 
 ***ict-openvpn_group***
 
-Sisältää tarvittavat resurssit vpn yhteyden ylläpitoon.
+Sisältää tarvittavat resurssit vpn yhteyden ylläpitoon. Openvpn ohjelmisto on asennettuna virtuaalikoneelle.
 
 ***NetworkWatcherRG***
 
