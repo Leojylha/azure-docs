@@ -8,7 +8,7 @@
 
 [4. Käyttöoikeuksien hallinta](https://github.com/Leojylha/azure-docs/blob/main/docs/4.%20Rbac.md)
 
-[5. Kustannustenhallinta](https://github.com/Leojylha/azure-docs/blob/main/docs/5.%20Cost%20Management.md)
+[5. Kustannusten hallinta](https://github.com/Leojylha/azure-docs/blob/main/docs/5.%20Cost%20Management.md)
 
 [6. Resurssien suojaus](https://github.com/Leojylha/azure-docs/blob/main/docs/6.%20Resource%20Locks.md)
 
